@@ -12,6 +12,8 @@ By using AWS IAM, you can effectively manage and secure access to your AWS resou
 
 Overall, IAM is an essential component of AWS security, providing granular control over access to your AWS account and resources, reducing the risk of unauthorized access and helping maintain a secure environment.
 
+
+---
 ## Components of IAM 
 
 1. **Users: IAM users represent individual people or entities (such as applications or services) that interact with your AWS resources**. Each user has a **unique name and security credentials (password or access keys)** used for authentication and access control.
@@ -22,3 +24,31 @@ Overall, IAM is an essential component of AWS security, providing granular contr
 
 4. **Policies: IAM policies are JSON documents that define permissions**. Policies specify the actions that can be performed on AWS resources and the resources to which the actions apply. **Policies can be attached to users, groups, or roles to control access**. IAM provides both AWS **managed policies** (predefined policies maintained by AWS) and **customer managed policies** (policies created and managed by you).
 
+
+---
+**Root User Login**
+![Root user login](./img/0_root_user_login.png)
+
+**IAM Dashboard**
+![IAM dashboard](./img/1_iam_dashboard.png)
+
+**IAM User creation**
+![IAM user creation](./img/2_iam_user_creation.png)
+
+**IAM User Login**
+![IAM user login](./img/3_iam_user_login.png)
+
+**Assign permissions Policies to a User**
+![Assign permissions policies to a user](./img/4_permissions_policies_to_a_user.png)
+
+**User Group**
+![User group](./img/5_user_group.png)
+
+**Add Users to a Group**
+![Add users to a group](./img/6_add_users_to_group.png)
+
+**Add Permissions to a Group**
+![Add permissions to a group](./img/7_add_permissions_to_group.png)
+
+**Roles**
+![Roles](./img/8_roles.png)
