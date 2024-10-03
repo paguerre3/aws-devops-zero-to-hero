@@ -148,15 +148,19 @@ Each **region** is a separate geographical area, and the **availability zones (A
 
 ---
 **Regions:**
+
 ![regions](./img/0_regions.png)
 
 **EC2 Service Dashboard:**
+
 ![ec2-service-dashboard](./img/1_ec2_dashboard.png)
 
 **EC2 instance creation:**
+
 ![ec2-instance-creation](./img/2_ec2_instance_creation.png)
 
 **Key Pair for "secured connection" to EC2 instances:**
+
 ![ec2-key-pair](./img/3_key_pairs_for_secured_connection_to_ec2_instance.png)
 
 **Create inbound rule to enable Public access for web application running inside EC2 instance:**
