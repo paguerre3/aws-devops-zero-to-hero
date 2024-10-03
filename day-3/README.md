@@ -1,4 +1,4 @@
-# What will you learn 
+# EC2, Regions and AZs
 
 ---
 ## Introduction to EC2:
