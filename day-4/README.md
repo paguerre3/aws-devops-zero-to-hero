@@ -88,7 +88,18 @@ VPC with servers in private subnets and NAT
 
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html
 
+
+---
 ![VPC complete sample](./img/1_VPC_complete_sample.png)
 
+### **ELB (Elastic Load Balancer)**
+   An **Elastic Load Balancer automatically distributes incoming traffic across multiple targets, such as EC2 instances, containers, or IP addresses, within one or more "availability zones".** It helps improve fault tolerance and availability of your applications. AWS offers three types of load balancers:
+   - **Application Load Balancer (ALB): Best for HTTP/HTTPS traffic and routing based on advanced application-layer rules.**
+   - **Network Load Balancer (NLB)**: Best for handling high-performance, low-latency TCP/UDP traffic.
+   - **Classic Load Balancer (CLB)**: Legacy option for basic load balancing needs.
 
+### **NAT Gateway**
+   A **NAT (Network Address Translation) Gateway allows instances in a "private subnet" to access the "internet"** (e.g., to download updates or patches) while keeping them isolated from inbound internet traffic. **It translates private IP addresses to public IP addresses for outbound communication, but the reverse is not allowed.** This ensures that instances in private subnets can maintain internet connectivity without being exposed to inbound internet traffic.
+
+Both ELB and NAT Gateway are essential for managing traffic and ensuring security in cloud environments.
 
