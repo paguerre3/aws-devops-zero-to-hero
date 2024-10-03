@@ -23,7 +23,7 @@ Just like a physical network, **a VPC has its own set of rules and configuration
 
 With a VPC, you have control over your network environment. You can define access rules, set up firewalls, and configure security groups to regulate who can access your resources and how they can communicate.
 
-![image](https://github.com/iam-veeramalla/aws-devops-zero-to-hero/assets/43399466/12cc10b6-724c-42c9-b07b-d8a7ce124e24)
+![VPC sample](./img/0_VPC.png)
 
 *By default, when you create an AWS account, AWS will create a default VPC for you* but this default VPC is just to get started with AWS. You should create VPCs for applications or projects. 
 
@@ -88,7 +88,7 @@ VPC with servers in private subnets and NAT
 
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html
 
-![image](https://github.com/iam-veeramalla/aws-devops-zero-to-hero/assets/43399466/89d8316e-7b70-4821-a6bf-67d1dcc4d2fb)
+![VPC complete sample](./img/1_VPC_complete_sample.png)
 
 
 
