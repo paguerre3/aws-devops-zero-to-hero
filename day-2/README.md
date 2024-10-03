@@ -29,7 +29,7 @@ Overall, IAM is an essential component of AWS security, providing granular contr
 **Root User Login**
 ![Root user login](./img/0_root_user_login.png)
 
-**IAM Dashboard**
+**IAM Service Dashboard**
 ![IAM dashboard](./img/1_iam_dashboard.png)
 
 **IAM User creation**
