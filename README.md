@@ -75,8 +75,9 @@ This day emphasizes security best practices in AWS. You'll learn how to implemen
 By implementing this project, you'll gain hands-on experience in setting up a secure VPC with EC2 instances, implementing networking and routing, configuring security groups and IAM roles, and ensuring proper access control. This project will provide a practical understanding of how these AWS services work together to create a secure and scalable infrastructure for your applications.
 
 ---
-## Day 8: AWS Interview Questions on EC2, IAM and VPC
+**[Day 8: AWS Interview Questions on EC2, IAM and VPC](./day-8/README.md)**
 
+---
 ## Day 9: Amazon S3
 
 This day focuses on Amazon S3, a scalable object storage service. You'll learn how to create S3 buckets, upload and download objects, and organize data using S3 features like versioning, lifecycle policies, and access control.

@@ -54,3 +54,7 @@ The use of Bastion hosts is a well-established pattern for improving security in
 **Register Targets of EC2 instances of the Target Group:**
 
 ![register_targets_of_ec2_instances_of_target_group](./img/6_register_targets_ec2_instances_of_target_group.png)
+
+
+---
+[DEMO Video](https://youtu.be/FZPTL_kNvXc)
