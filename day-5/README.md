@@ -76,3 +76,21 @@ Together, **Security Groups** and **NACLs** provide layered security in AWS, off
 
 ![SGs and NACLs sample](./img/0_SGs_NACLs.png)
 
+
+---
+**1. VPC Dashboard:**
+
+![VPC Dashboard](./img/1_vpc_dashboard.png)
+
+**2. Create VPC and more (subnets):**
+
+![Create VPC and more (subnets)](./img/2_create_vpc_and_more.png)
+
+**3. Create an EC2 instance and assign a custom VPC:**
+
+![Create an EC2 instance and assign a custom VPC to it](./img/3_create_ec2_instance_and_assign_custom_vpc.png)
+
+**4. ACLs network rules of VPC in order from lowest to max (star `*` is the last rule):**
+
+*The lowest rule is evaluated 1st, i.e. if a lower rule number has an action that is opposite to a higher number then that is the priority (like a `break` clause), e.g. if rule #100 denies inbound TCP traffic to a specific Port (8888) then if rule #300 allows "all" incoming traffic from every Port Number then because of the lowest priority rule the final evaluation is allowing all incoming traffic except the one that comes from Port number 88888 (which will be evaluated 1st).
+![ACLs network rules of VPC in order from lowest to max](./img/4_ACLs_network_rules_in_order_from_beginning_to_star.png)        
