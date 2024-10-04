@@ -4,35 +4,42 @@ Complete YouTube playlist - https://www.youtube.com/playlist?list=PLdpzxOOAlwvLN
 
 AWS zero to hero repo for devops engineers to learn AWS in 30 Days. This repo includes projects, presentations, interview questions and real time examples. Each day's class will provide real-time knowledge on AWS services, allowing you to apply what you've learned and gain practical skills in working with AWS in a DevOps context.
 
-[## Day 1: Introduction to AWS](./day-1/README.md)
+---
+**[Day 1: Introduction to AWS](./day-1/README.md)**
 
 You will learn what is private and public cloud. Why companies are moving to public cloud, what are the advantages of moving to cloud.
 
 Also, you will be introduced to the basics of AWS, including the core services and their significance in DevOps practices. Finally learn how to set up an AWS account and navigate the AWS Management Console.
 
-## Day 2: IAM (Identity and Access Management)
+---
+**[Day 2: IAM (Identity and Access Management)](./day-2/README.md)**
 
 You will explore IAM, which is used for managing access to AWS resources. You'll learn how to create IAM users, groups, and roles, and how to apply permissions and security best practices to ensure proper access control.
 
-## Day 3: EC2 Instances
+---
+**[Day 3: EC2 Instances](./day-3/README.md)**
 
 You'll dive into EC2, which provides virtual servers in the cloud. You'll learn how to launch EC2 instances, connect to them using SSH, and understand key concepts such as instance types, security groups, and key pairs.
 
 **Your First AWS Project**: Deploy a simple web application(such as jenkins) on the ec2 instance and access the application from outside AWS.
 
-## Day 4: AWS Networking (VPC)
+---
+**[Day 4: AWS Networking (VPC)](./day-4/README.md)**
 
 You'll explore AWS networking concepts, with a specific focus on VPC (Virtual Private Cloud). You'll learn how to create and configure VPCs, subnets, and route tables, enabling you to design and manage the network infrastructure for your applications.
 
-## Day 5: AWS Security
+---
+**[Day 5: AWS Security](./day-5/README.md)**
 
 This day emphasizes security best practices in AWS. You'll learn how to implement security measures such as security groups, network ACLs (Access Control Lists), and IAM policies to ensure the confidentiality, integrity, and availability of your AWS resources.
 
-## Day 6: AWS Route 53
+---
+**[Day 6: AWS Route 53](./day-6/README.md)**
 
 **Project:** Configure and manage a domain name using Route 53. You'll register a domain, set up DNS records, and explore advanced features such as health checks, routing policies, and DNS-based failover.
 
-## Day 7: Secure VPC Setup with EC2 Instances
+---
+***[Day 7: Secure VPC Setup with EC2 Instances](./day-7/README.md)**
 
 **Project:**
 
@@ -67,6 +74,7 @@ This day emphasizes security best practices in AWS. You'll learn how to implemen
 
 By implementing this project, you'll gain hands-on experience in setting up a secure VPC with EC2 instances, implementing networking and routing, configuring security groups and IAM roles, and ensuring proper access control. This project will provide a practical understanding of how these AWS services work together to create a secure and scalable infrastructure for your applications.
 
+---
 ## Day 8: AWS Interview Questions on EC2, IAM and VPC
 
 ## Day 9: Amazon S3
