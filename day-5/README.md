@@ -92,5 +92,5 @@ Together, **Security Groups** and **NACLs** provide layered security in AWS, off
 
 **4. ACLs network rules of VPC in order from lowest to max (star `*` is the last rule):**
 
-*The lowest rule is evaluated 1st, i.e. if a lower rule number has an action that is opposite to a higher number then that is the priority (like a `break` clause), e.g. if rule #100 denies inbound TCP traffic to a specific Port (8888) then if rule #300 allows "all" incoming traffic from every Port Number then because of the lowest priority rule the final evaluation is allowing all incoming traffic except the one that comes from Port number 88888 (which will be evaluated 1st).*
+*The lowest rule is evaluated 1st, i.e. if a lower rule number has an action that is opposite to a higher number then that is the priority (like a `break` clause), e.g. if rule #100 denies inbound TCP traffic to a specific Port (8888) then if rule #300 allows "all" incoming traffic from every Port Number then because of the lowest priority rule the final result will be allowing all incoming traffic except the one that comes from Port number 8888 (which will be evaluated 1st).*
 ![ACLs network rules of VPC in order from lowest to max](./img/4_ACLs_network_rules_in_order_from_beginning_to_star.png)        
