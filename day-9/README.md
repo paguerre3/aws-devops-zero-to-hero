@@ -180,36 +180,36 @@ Ensure data consistency and durability by understanding S3's data replication an
 ---
 **S3 allows any kind of storage**
 
-[s3_allows_any_kind_of_storage](./img/1_s3_bucket_allows_any_kind_of_storage.png)
+![s3_allows_any_kind_of_storage](./img/1_s3_bucket_allows_any_kind_of_storage.png)
 
 **Access S3 bucket from anywhere (Global Region access)**
 
-[access_s3_bucket_from_anywhere](./img/2_access_s3_bucket_global_access_storage.png)
+![access_s3_bucket_from_anywhere](./img/2_access_s3_bucket_global_access_storage.png)
 
 **S3 Bucket dashboard has Global region**
 
-[s3_bucket_dashboard_has_global_region](./img/3_s3_bucket_dashboard_has_global_region.png)
+![s3_bucket_dashboard_has_global_region](./img/3_s3_bucket_dashboard_has_global_region.png)
 
 **Create S3 Bucket has Global access**
 
-[create_s3_bucket_has_global_access](./img/4_create_s3_bucket_has_global_access.png)
+![create_s3_bucket_has_global_access](./img/4_create_s3_bucket_has_global_access.png)
 
 **Upload data into S3 Bucket**
 
-[upload_data_into_s3_bucket](./img/5_upload_data_into_s3_bucket.png)
+![upload_data_into_s3_bucket](./img/5_upload_data_into_s3_bucket.png)
 
 **Upload Storage Actions**
 
-[upload_storage_actions](./img/6_uploaded_storage_actions.png)
+![upload_storage_actions](./img/6_uploaded_storage_actions.png)
 
 **Enable versioning in S3 Bucket**
 
-[enable_versioning_in_s3_bucket](./img/7_enable_bucket_versioning.png)
+![enable_versioning_in_s3_bucket](./img/7_enable_bucket_versioning.png)
 
 **Edit bucket permissions**
 
-[edit_bucket_permissions](./img/8_edit_bucket_permissions.png)
+![edit_bucket_permissions](./img/8_edit_bucket_permissions.png)
 
 **Static Web Hosting**
 
-[static_web_hosting](./img/9_static_web_hosting.png)
+![static_web_hosting](./img/9_static_web_hosting.png)
