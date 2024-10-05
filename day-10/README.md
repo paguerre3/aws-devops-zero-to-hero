@@ -17,4 +17,6 @@ This uploads a file to an S3 bucket.
 ---
 **"Automation tasks" related to Infrastructure Management is done via AWS CLI.**
 
-![AWS CLI Reference](https://aws.amazon.com/cli/)
+[AWS CLI Documentation](https://aws.amazon.com/cli/)
+
+[AWS CLI Reference](https://docs.aws.amazon.com/cli/latest/reference/)

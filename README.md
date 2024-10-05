@@ -83,8 +83,9 @@ By implementing this project, you'll gain hands-on experience in setting up a se
 This day focuses on Amazon S3, a scalable object storage service. You'll learn how to create S3 buckets, upload and download objects, and organize data using S3 features like versioning, lifecycle policies, and access control.
 
 ---
-## Day 10: AWS CLI
+**[Day 10: AWS CLI](./day-10/README.md)**
 
+---
 ## Day 11: AWS CloudFormation
 
 This day introduces Infrastructure as Code (IaC) using AWS CloudFormation. You'll learn how to create CloudFormation templates to automate the provisioning of resources, manage stacks, and ensure consistent infrastructure across deployments.
