@@ -78,10 +78,11 @@ By implementing this project, you'll gain hands-on experience in setting up a se
 **[Day 8: AWS Interview Questions on EC2, IAM and VPC](./day-8/README.md)**
 
 ---
-## Day 9: Amazon S3
+**[Day 9: Amazon S3](./day-9/README.md)**
 
 This day focuses on Amazon S3, a scalable object storage service. You'll learn how to create S3 buckets, upload and download objects, and organize data using S3 features like versioning, lifecycle policies, and access control.
 
+---
 ## Day 10: AWS CLI
 
 ## Day 11: AWS CloudFormation
