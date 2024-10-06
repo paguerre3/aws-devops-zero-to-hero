@@ -100,12 +100,13 @@ This day focuses on AWS CodeCommit, a managed source control service. You'll lea
 **Project:** You'll configure a CodeCommit repository for a team project, including setting up access control and collaboration workflows.
 
 ---
-## Day 13: AWS CodePipeline
+**[Day 13: AWS CodePipeline](./day-13/README.md)**
 
 You'll dive into AWS CodePipeline, a fully managed continuous delivery service. You'll learn how to build end-to-end CI/CD pipelines by configuring source, build, and deployment stages, automating the entire software release process.
 
 **Project:** You'll create a CI/CD pipeline using CodePipeline for an application deployment, including source code integration, build, and automatic deployment to a target environment.
 
+---
 ## Day 14: AWS CodeBuild
 
 This day focuses on AWS CodeBuild, a fully managed build service. You'll learn how to configure build projects in CodeBuild, define build specifications, and perform build and testing processes.
