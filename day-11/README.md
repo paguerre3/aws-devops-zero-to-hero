@@ -220,7 +220,7 @@ In summary, **stack drift** refers to the difference between your CloudFormation
 
 
 ---
-**Cloud Formation Dashboards:**
+**Cloud Formation Dashboard:**
 
 ![CloudFormation Dashboard](./img/0_cloud_formation_dashboard.png)
 
