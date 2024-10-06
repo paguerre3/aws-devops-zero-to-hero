@@ -90,15 +90,16 @@ This day focuses on Amazon S3, a scalable object storage service. You'll learn h
 
 This day introduces Infrastructure as Code (IaC) using AWS CloudFormation. You'll learn how to create CloudFormation templates to automate the provisioning of resources, manage stacks, and ensure consistent infrastructure across deployments.
 
----
 **Project:** You'll work on creating a CloudFormation template that provisions a fully configured application stack, including EC2 instances, networking components, and security groups.
 
-## Day 12: AWS CodeCommit
+---
+**[Day 12: AWS CodeCommit](./day-12/README.md)**
 
 This day focuses on AWS CodeCommit, a managed source control service. You'll learn how to set up a Git repository in CodeCommit, collaborate with team members, and manage version control of your codebase.
 
 **Project:** You'll configure a CodeCommit repository for a team project, including setting up access control and collaboration workflows.
 
+---
 ## Day 13: AWS CodePipeline
 
 You'll dive into AWS CodePipeline, a fully managed continuous delivery service. You'll learn how to build end-to-end CI/CD pipelines by configuring source, build, and deployment stages, automating the entire software release process.
