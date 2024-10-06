@@ -86,10 +86,11 @@ This day focuses on Amazon S3, a scalable object storage service. You'll learn h
 **[Day 10: AWS CLI](./day-10/README.md)**
 
 ---
-## Day 11: AWS CloudFormation
+**[Day 11: AWS CloudFormation](./day-11/README.md)**
 
 This day introduces Infrastructure as Code (IaC) using AWS CloudFormation. You'll learn how to create CloudFormation templates to automate the provisioning of resources, manage stacks, and ensure consistent infrastructure across deployments.
 
+---
 **Project:** You'll work on creating a CloudFormation template that provisions a fully configured application stack, including EC2 instances, networking components, and security groups.
 
 ## Day 12: AWS CodeCommit
