@@ -344,7 +344,7 @@ By completing these steps, your AWS environment is ready to host an Amazon EKS c
 
 [2 - Configure Open ID Connect Provider for IAM](./2_configure-oidc-connector.md)
 
-[3 - Create Fargate Profile and Deploy Ingress Controller Implementation](./3_2048-app-deploy-ingress.md)
+[3 - Create Fargate Profile and Deploy Ingress (Internal Ingress without External Address yet -Ingress controller is implemented at the end)](./3_2048-app-deploy-ingress.md)
 
 **New Fargate Profile with New K8s Namespace:**
 
