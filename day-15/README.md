@@ -124,3 +124,10 @@ In summary, **AWS CodeDeploy** is a powerful, flexible service for automating de
 
 
 ---
+[Code Deploy Guide (CD)](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html)
+
+[Install Code Deploy Agent on Build/Deploy Instances](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ssm.html)
+
+**Code Deploy Types:**
+
+![Code Deploy Types](./img/0_code_deployment_types.png)
