@@ -2,6 +2,8 @@
 
 **Amazon Elastic Container Registry (Amazon ECR) is a fully managed container image registry service provided by AWS. It allows you to store, manage, and deploy Docker container images easily and securely.** ECR integrates seamlessly with AWS services, making it a popular choice for managing containers in AWS environments.
 
+[ECR Guide](https://docs.aws.amazon.com/es_es/AmazonECR/latest/userguide/what-is-ecr.html)
+
 **Key Features of Amazon ECR:**
 
 1. **Fully Managed:**
@@ -154,3 +156,14 @@ As good practice, remember to clean up resources that you no longer need to avoi
 1. Make sure there are no images in the repository, or delete the images using `docker rmi` locally.
 2. Go to the AWS Management Console, navigate to the Amazon ECR service, and select your repository.
 3. Click on "Delete" and confirm the action.
+
+
+
+---
+**ECR Dashboard - Create Repository for Storing Docker Images:**
+
+![ECR Dashboard - Create Repository for Storing Docker Images](./img/0_ecr_create_repo_for_storing_docker_images.png)
+
+**ECR - Demo image pushed into Private Repository:**
+
+![ECR - Demo image pushed into Private Repository](./img/1_ecr_demo_image_pushed_into_private_repo.png)
