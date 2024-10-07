@@ -133,12 +133,13 @@ This day focuses on monitoring AWS resources using AWS CloudWatch. You'll learn 
 This day introduces serverless computing with AWS Lambda. You'll learn how to create and deploy serverless functions, trigger them based on events, and leverage Lambda to build scalable and event-driven architectures.
 
 ---
-## Day 18: AWS CloudWatch Events and EventBridge
+**[Day 18: AWS CloudWatch Events and EventBridge](./day-18/README.md)**
 
 This day focuses on AWS CloudWatch Events and EventBridge, services for event-driven architectures. You'll learn how to create event rules, configure event targets, and build serverless event-driven workflows.
 
 **Project:** You'll build a serverless event-driven workflow using CloudWatch Events and EventBridge, demonstrating the integration and automation of different AWS services based on events.
 
+---
 ## Day 19: AWS CloudFront
 
  If you've never heard of CDN or CloudFront before, don't worry, we will start from scratch and gradually build up your understanding. By the end, you'll be well-versed in these technologies.
