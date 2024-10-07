@@ -93,33 +93,34 @@ This day introduces Infrastructure as Code (IaC) using AWS CloudFormation. You'l
 **Project:** You'll work on creating a CloudFormation template that provisions a fully configured application stack, including EC2 instances, networking components, and security groups.
 
 ---
-**[Day 12: AWS CodeCommit](./day-12/README.md)**
+**[Day 12: AWS CodeCommit (Repository)](./day-12/README.md)**
 
 This day focuses on AWS CodeCommit, a managed source control service. You'll learn how to set up a Git repository in CodeCommit, collaborate with team members, and manage version control of your codebase.
 
 **Project:** You'll configure a CodeCommit repository for a team project, including setting up access control and collaboration workflows.
 
 ---
-**[Day 13: AWS CodePipeline](./day-13/README.md)**
+**[Day 13: AWS CodePipeline (CI/CD)](./day-13/README.md)**
 
 You'll dive into AWS CodePipeline, a fully managed continuous delivery service. You'll learn how to build end-to-end CI/CD pipelines by configuring source, build, and deployment stages, automating the entire software release process.
 
 **Project:** You'll create a CI/CD pipeline using CodePipeline for an application deployment, including source code integration, build, and automatic deployment to a target environment.
 
 ---
-**[Day 14: AWS CodeBuild](./day-14/README.md)**
+**[Day 14: AWS CodeBuild (CI Builds)](./day-14/README.md)**
 
 This day focuses on AWS CodeBuild, a fully managed build service. You'll learn how to configure build projects in CodeBuild, define build specifications, and perform build and testing processes.
 
 **Project:** You'll configure and run CodeBuild for a project, including defining build specifications and integrating with other AWS services.
 
 ---
-## Day 15: AWS CodeDeploy
+**[Day 15: AWS CodeDeploy](./day-15/README.md)**
 
 You'll explore AWS CodeDeploy, a service for automating application deployments to various compute environments. You'll learn how to create deployment groups, configure deployment strategies, and perform automatic rollbacks if necessary.
 
 **Project:** You'll implement a Blue/Green deployment strategy for a sample application using CodeDeploy, ensuring zero-downtime deployments and easy rollback options.
 
+---
 ## Day 16: AWS CloudWatch
 
 This day focuses on monitoring AWS resources using AWS CloudWatch. You'll learn how to create alarms, set up notifications, and collect metrics to gain insights into the health and performance of your applications and infrastructure.
