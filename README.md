@@ -140,12 +140,13 @@ This day focuses on AWS CloudWatch Events and EventBridge, services for event-dr
 **Project:** You'll build a serverless event-driven workflow using CloudWatch Events and EventBridge, demonstrating the integration and automation of different AWS services based on events.
 
 ---
-## Day 19: AWS CloudFront
+**[Day 19: AWS CloudFront](./day-19/README.md)**
 
  If you've never heard of CDN or CloudFront before, don't worry, we will start from scratch and gradually build up your understanding. By the end, you'll be well-versed in these technologies.
 
 **Project:** You'll configure a s3 bucket to host a static website and learn how to serve the requests to this website through CDN that is AWS Cloud Front.
 
+---
 ## Day 20: AWS ECR (Elastic Container Registry)
 
 You'll explore AWS ECR, a fully managed container registry for storing and managing container images. You'll learn how to push and pull Docker images to and from ECR, enabling seamless integration with ECS and other container services.
