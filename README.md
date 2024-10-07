@@ -128,10 +128,11 @@ This day focuses on monitoring AWS resources using AWS CloudWatch. You'll learn 
 **Project:** You'll set up CloudWatch alarms for critical metrics of an application, define appropriate threshold conditions, and configure notification actions.
 
 ---
-## Day 17: AWS Lambda
+**[Day 17: AWS Lambda](./day-17/README.md)**
 
 This day introduces serverless computing with AWS Lambda. You'll learn how to create and deploy serverless functions, trigger them based on events, and leverage Lambda to build scalable and event-driven architectures.
 
+---
 ## Day 18: AWS CloudWatch Events and EventBridge
 
 This day focuses on AWS CloudWatch Events and EventBridge, services for event-driven architectures. You'll learn how to create event rules, configure event targets, and build serverless event-driven workflows.
