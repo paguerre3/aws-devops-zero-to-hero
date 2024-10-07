@@ -352,5 +352,7 @@ By completing these steps, your AWS environment is ready to host an Amazon EKS c
 
 [4 - Install sample App using `Kubectl` in new "namespace", it requires updating the K8s manifest](./4_sample-app.md)
 
-[5 - ALB Add On and Deploy ALB Ingress Controller Implementation to access from Outside/External IP](./5_alb-controller-add-on.md)
+[5 - ALB Add On and Deploy ALB Ingress Controller Implementation to access from Outside/External Address](./5_alb-controller-add-on.md)
+
+![External Address Generated after creating Ingress Controller ALB](./img/5_alb_ingress.png)
 
