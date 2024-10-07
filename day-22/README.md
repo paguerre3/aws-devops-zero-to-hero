@@ -356,3 +356,5 @@ By completing these steps, your AWS environment is ready to host an Amazon EKS c
 
 ![External Address Generated after creating Ingress Controller ALB](./img/5_alb_ingress.png)
 
+**Summary of created K8s components: Pod, Deploy, Service, Ingress, Ingress Controller**
+
