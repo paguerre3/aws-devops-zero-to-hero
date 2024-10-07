@@ -121,12 +121,13 @@ You'll explore AWS CodeDeploy, a service for automating application deployments 
 **Project:** You'll implement a Blue/Green deployment strategy for a sample application using CodeDeploy, ensuring zero-downtime deployments and easy rollback options.
 
 ---
-## Day 16: AWS CloudWatch
+**[Day 16: AWS CloudWatch](./day-16/README.md)**
 
 This day focuses on monitoring AWS resources using AWS CloudWatch. You'll learn how to create alarms, set up notifications, and collect metrics to gain insights into the health and performance of your applications and infrastructure.
 
 **Project:** You'll set up CloudWatch alarms for critical metrics of an application, define appropriate threshold conditions, and configure notification actions.
 
+---
 ## Day 17: AWS Lambda
 
 This day introduces serverless computing with AWS Lambda. You'll learn how to create and deploy serverless functions, trigger them based on events, and leverage Lambda to build scalable and event-driven architectures.
