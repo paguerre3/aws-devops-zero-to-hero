@@ -107,12 +107,13 @@ You'll dive into AWS CodePipeline, a fully managed continuous delivery service. 
 **Project:** You'll create a CI/CD pipeline using CodePipeline for an application deployment, including source code integration, build, and automatic deployment to a target environment.
 
 ---
-## Day 14: AWS CodeBuild
+**[Day 14: AWS CodeBuild](./day-14/README.md)**
 
 This day focuses on AWS CodeBuild, a fully managed build service. You'll learn how to configure build projects in CodeBuild, define build specifications, and perform build and testing processes.
 
 **Project:** You'll configure and run CodeBuild for a project, including defining build specifications and integrating with other AWS services.
 
+---
 ## Day 15: AWS CodeDeploy
 
 You'll explore AWS CodeDeploy, a service for automating application deployments to various compute environments. You'll learn how to create deployment groups, configure deployment strategies, and perform automatic rollbacks if necessary.
