@@ -114,7 +114,7 @@ This day focuses on AWS CodeBuild, a fully managed build service. You'll learn h
 **Project:** You'll configure and run CodeBuild for a project, including defining build specifications and integrating with other AWS services.
 
 ---
-**[Day 15: AWS CodeDeploy (Deploy Service for doing B/G deployments or Rolling Updates)](./day-15/README.md)**
+**[Day 15: AWS CodeDeploy (CD: Deploy Service for doing B/G deployments or Rolling Updates)](./day-15/README.md)**
 
 You'll explore AWS CodeDeploy, a service for automating application deployments to various compute environments. You'll learn how to create deployment groups, configure deployment strategies, and perform automatic rollbacks if necessary.
 
