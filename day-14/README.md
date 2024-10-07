@@ -151,3 +151,14 @@ In this final step, we'll trigger the CI process by making a change to our GitHu
 - Head over to the AWS CodePipeline console and navigate to your pipeline.
 - You should see the pipeline automatically kick off as soon as it detects the changes in your repository.
 - Sit back and relax while AWS CodePipeline takes care of the rest. It will fetch the latest code, trigger the build process with AWS CodeBuild, and deploy the application if you configured the deployment stage.
+
+
+
+---
+**AWS Code Build - Build Command: Pass "env" vars to Docker Build step in Build Spec:**
+
+![AWS Code Build - Build Command: Pass "env" vars to Docker Build step in Build Spec](./img/0_build_command_sepc_pass_env_vars_to_bocker_build_step.png)
+
+**Code Build Dashboard, Steps and Progress:**
+
+![Code Build Dashboard, Steps and Progress](./img/1_code_build_dashboard_steps_and_progress.png)
