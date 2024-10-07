@@ -1,82 +1,198 @@
 # AWS EKS 
 
-## Introduction
+**Amazon Elastic Kubernetes Service (Amazon EKS) is a managed Kubernetes service provided by AWS, designed to run, scale, and manage Kubernetes applications on the AWS cloud.** EKS simplifies the process of running Kubernetes clusters by managing the Kubernetes control plane, automating tasks such as scaling, patching, and securing the cluster.
 
-## Table of Contents:
+**Key Features of Amazon EKS:**
 
-1. [Understanding Kubernetes Fundamentals](#understanding-kubernetes-fundamentals)
-   - 1.1 [EKS vs. Self-Managed Kubernetes: Pros and Cons](#eks-vs-self-managed-kubernetes-pros-and-cons)
+1. **Managed Kubernetes Control Plane:**
+   **AWS EKS runs and scales the Kubernetes control plane across multiple Availability Zones to ensure high availability.** AWS manages key components like the API server, etcd database, and other core services, providing a managed experience for users without the need to manually set up and manage Kubernetes control plane components.
 
-2. [Setting up your AWS Environment for EKS](#setting-up-your-aws-environment-for-eks)
-   - 2.1 [Creating an AWS Account and Setting up IAM Users](#creating-an-aws-account-and-setting-up-iam-users)
-   - 2.2 [Configuring the AWS CLI and kubectl](#configuring-the-aws-cli-and-kubectl)
-   - 2.3 [Preparing Networking and Security Groups for EKS](#preparing-networking-and-security-groups-for-eks)
+2. **Integration with AWS Services:**
+   EKS integrates seamlessly with various AWS services, enhancing your Kubernetes environment:
+   - **Amazon EC2** for running worker nodes
+   - **AWS Fargate** for running serverless pods
+   - **Amazon ECR (Elastic Container Registry)** for storing container images
+   - **Elastic Load Balancer (ELB)** for traffic distribution
+   - **AWS IAM** for controlling access and permissions
+   - **Amazon VPC** for secure and isolated networking
 
-3. [Launching your First EKS Cluster](#launching-your-first-eks-cluster)
-   - 3.1 [Using the EKS Console for Cluster Creation](#using-the-eks-console-for-cluster-creation)
-   - 3.2 [Launching an EKS Cluster via AWS CLI](#launching-an-eks-cluster-via-aws-cli)
-   - 3.3 [Authenticating with the EKS Cluster](#authenticating-with-the-eks-cluster)
+3. **Highly Available and Secure:**
+   - **Multi-AZ Control Plane:** The EKS control plane runs across multiple AWS availability zones to ensure high availability. 
+   - **Security Integration:** EKS integrates with **AWS Identity and Access Management (IAM)** to control access to Kubernetes resources. It also supports network policies, security groups, and encryption options for safeguarding your applications.
+   - **Auto-Scaling and Self-Healing:** EKS integrates with **Cluster Autoscaler** to dynamically adjust the number of worker nodes based on resource usage. Kubernetes automatically replaces unhealthy nodes or failed pods.
 
-4. [Deploying Applications on EKS](#deploying-applications-on-eks)
-   - 4.1 [Containerizing Applications with Docker](#containerizing-applications-with-docker)
-   - 4.2 [Writing Kubernetes Deployment YAMLs](#writing-kubernetes-deployment-yamls)
-   - 4.3 [Deploying Applications to EKS: Step-by-step Guide](#deploying-applications-to-eks-step-by-step-guide)
+4. **Kubernetes API Compatibility:**
+   EKS is fully compatible with upstream Kubernetes, meaning you can use standard Kubernetes tooling and APIs (kubectl, Helm, etc.) with EKS. This makes it easy to migrate applications from on-premises or other Kubernetes environments to AWS.
 
-## Understanding Kubernetes Fundamentals
+5. **AWS Fargate Integration:**
+   **EKS supports AWS Fargate (Serverless), allowing you to run Kubernetes pods without managing the underlying infrastructure.** Fargate automatically provisions and scales the compute resources required to run containers.
 
-### 1.1 EKS vs. Self-Managed Kubernetes: Pros and Cons
+6. **Managed Node Groups:**
+   **EKS allows you to create and manage "node groups" (groups of EC2 instances that serve as worker nodes for your cluster) through a managed experience.** AWS handles node updates and terminations for you.
 
-1.1.1 EKS (Amazon Elastic Kubernetes Service)
-Pros:
+7. **Kubernetes Networking:**
+   - **Amazon VPC CNI Plugin:** EKS provides the **Amazon VPC Container Networking Interface (CNI)** plugin, which integrates Kubernetes networking with the Amazon VPC, enabling each pod to receive its own IP address.
+   - **Load Balancing:** EKS integrates with **AWS Elastic Load Balancer** to automatically distribute traffic between services running on different pods.
 
-    Managed Control Plane: EKS takes care of managing the Kubernetes control plane components, such as the API server, controller manager, and etcd. AWS handles upgrades, patches, and ensures high availability of the control plane.
+8. **EKS Add-ons:**
+   EKS supports installing Kubernetes add-ons, such as:
+   - **CoreDNS** for DNS-based service discovery.
+   - **kube-proxy** for networking.
+   - **Amazon VPC CNI** for VPC integration.
+   These add-ons can be managed by EKS, so you don’t need to install or manage them manually.
 
-    Automated Updates: EKS automatically updates the Kubernetes version, eliminating the need for manual intervention and ensuring that the cluster stays up-to-date with the latest features and security patches.
+9. **Monitoring and Logging:**
+   EKS integrates with **Amazon CloudWatch** for monitoring and logging Kubernetes clusters. You can set up CloudWatch metrics and alarms for your cluster and use **AWS CloudTrail** to track API calls made by Kubernetes and AWS resources.
 
-    Scalability: EKS can automatically scale the Kubernetes control plane based on demand, ensuring the cluster remains responsive as the workload increases.
+10. **Version Control and Updates:**
+    EKS allows you to choose the Kubernetes version that fits your needs and provides regular updates to ensure you're running the latest and most secure versions of Kubernetes. You can perform in-place upgrades of the control plane and worker nodes without downtime.
 
-    AWS Integration: EKS seamlessly integrates with various AWS services, such as AWS IAM for authentication and authorization, Amazon VPC for networking, and AWS Load Balancers for service exposure.
+**Key Components of EKS:**
 
-    Security and Compliance: EKS is designed to meet various security standards and compliance requirements, providing a secure and compliant environment for running containerized workloads.
+1. **Control Plane:**
+   **The control plane is fully managed by AWS, meaning you don’t have to handle its setup, patching, or scalability. It runs Kubernetes components like the API server and the etcd database.**
 
-    Monitoring and Logging: EKS integrates with AWS CloudWatch for monitoring cluster health and performance metrics, making it easier to track and troubleshoot issues.
+2. **Worker Nodes:**
+   **Worker nodes are EC2 instances or Fargate pods that run your containerized workloads.** Worker nodes communicate with the managed control plane, and you can run workloads on one or more nodes in a cluster.
 
-    Ecosystem and Community: Being a managed service, EKS benefits from continuous improvement, support, and contributions from the broader Kubernetes community.
+3. **Cluster Autoscaler:**
+   EKS supports the **Kubernetes Cluster Autoscaler**, which automatically adjusts the size of your worker node pool based on resource demands. If pods can’t be scheduled due to insufficient resources, the autoscaler increases the number of nodes.
 
-Cons:
+4. **Networking:**
+   EKS integrates with your Amazon VPC, and each pod gets its own IP address. **You can control inbound and outbound traffic using VPC security groups and use network policies to secure communication between pods.**
 
-    Cost: EKS is a managed service, and this convenience comes at a cost. Running an EKS cluster may be more expensive compared to self-managed Kubernetes, especially for large-scale deployments.
+**Deployment Models:**
 
-    Less Control: While EKS provides a great deal of automation, it also means that you have less control over the underlying infrastructure and some Kubernetes configurations.
+1. **EKS with EC2:**
+   In this model, you run your Kubernetes worker nodes on **Amazon EC2** instances. **You manage the EC2 infrastructure**, including selecting instance types, scaling policies, and networking.
 
-1.1.2 Self-Managed Kubernetes on EC2 Instances
-Pros:
+2. **EKS with Fargate:**
+   This is a **serverless option where AWS Fargate runs your Kubernetes pods without you having to manage the underlying compute infrastructure.** It automatically provisions the necessary compute resources for your pods.
 
-    Cost-Effective: Self-managed Kubernetes allows you to take advantage of EC2 spot instances and reserved instances, potentially reducing the overall cost of running Kubernetes clusters.
+3. **Hybrid Deployments:**
+   You can also run EKS clusters across on-premises data centers and the cloud using **AWS Outposts** or other Kubernetes hybrid models, enabling consistent operations between your on-premises and cloud-based workloads.
 
-    Flexibility: With self-managed Kubernetes, you have full control over the cluster's configuration and infrastructure, enabling customization and optimization for specific use cases.
+**How to Set Up EKS:**
 
-    EKS-Compatible: Self-managed Kubernetes on AWS can still leverage various AWS services and features, enabling integration with existing AWS resources.
+1. **Create an EKS Cluster:**
+   You can create an EKS cluster via the AWS Management Console, AWS CLI, or Infrastructure-as-Code tools like Terraform or AWS CloudFormation.
 
-    Experimental Features: Self-managed Kubernetes allows you to experiment with the latest Kubernetes features and versions before they are officially supported by EKS.
+   Example using the AWS CLI:
+   ```bash
+   aws eks create-cluster --name my-cluster --role-arn <iam_role_arn> --resources-vpc-config subnetIds=<subnet_ids>,securityGroupIds=<sg_ids>
+   ```
 
-Cons:
+2. **Provision Worker Nodes:**
+   **Once your control plane is ready, you can add worker nodes (either EC2 instances or Fargate tasks) to the cluster.** 
 
-    Complexity: Setting up and managing a self-managed Kubernetes cluster can be complex and time-consuming, especially for those new to Kubernetes or AWS.
+   For EC2 instances, AWS provides an Amazon Machine Image (AMI) optimized for EKS:
+   ```bash
+   aws eks create-nodegroup --cluster-name my-cluster --nodegroup-name my-nodes --node-role <node_role_arn> --subnets <subnet_ids>
+   ```
 
-    Maintenance Overhead: Self-managed clusters require manual management of Kubernetes control plane updates, patches, and high availability.
+3. **Configure `kubectl`:**
+   Install and configure **kubectl** to interact with your EKS cluster.
+   ```bash
+   aws eks update-kubeconfig --region <region> --name my-cluster
+   ```
 
-    Scaling Challenges: Scaling the control plane of a self-managed cluster can be challenging, and it requires careful planning to ensure high availability during scaling events.
+4. **Deploy Applications:**
+   Once your cluster is up, you can deploy Kubernetes applications using standard tools like **kubectl** or **Helm** charts.
+   ```bash
+   kubectl apply -f deployment.yaml
+   ```
 
-    Security and Compliance: Self-managed clusters may require additional effort to implement best practices for security and compliance compared to EKS, which comes with some built-in security features.
+5. **Monitor and Scale:**
+   Use **Amazon CloudWatch** to monitor your cluster and automatically scale pods or worker nodes as needed using **Horizontal Pod Autoscaler** or **Cluster Autoscaler**.
 
-    Lack of Automation: Self-managed Kubernetes requires more manual intervention and scripting for certain operations, which can increase the risk of human error.
+**Use Cases for EKS:**
 
-## Setting up your AWS Environment for EKS
+1. **Microservices:**
+   EKS is ideal for managing microservices architectures, where different services are deployed as Kubernetes pods, enabling scalability, resilience, and independent updates.
 
-Sure! Let's go into detail for each subsection:
+2. **Hybrid Cloud:**
+   With support for both on-premises and cloud deployments, EKS is well-suited for hybrid cloud scenarios, where workloads are distributed across environments.
 
-## 2.1 Creating an AWS Account and Setting up IAM Users
+3. **Continuous Deployment:**
+   EKS integrates well with CI/CD pipelines, enabling automated deployment of containerized applications. Tools like **Jenkins**, **CodePipeline**, and **CodeBuild** can be used to automate testing, building, and deploying applications to an EKS cluster.
+
+4. **Machine Learning Workloads:**
+   EKS integrates with **Kubeflow** and other tools to support machine learning workloads. Kubernetes provides a scalable and flexible environment for training and deploying machine learning models.
+
+**Benefits of EKS:**
+
+1. **Simplified Kubernetes Management:**
+   EKS manages the Kubernetes control plane, reducing operational overhead.
+   
+2. **Security and Compliance:**
+   EKS integrates with AWS’s robust security services, including IAM, VPC, and security groups, ensuring secure access to your clusters.
+
+3. **Scalability:**
+   EKS supports automatic scaling for both the control plane and worker nodes, ensuring your applications can handle varying workloads.
+
+4. **Cost-Effective:**
+   With options to run workloads on EC2 or Fargate, you can optimize costs based on your application's needs—choosing the level of control and flexibility you want.
+
+In summary, Amazon EKS simplifies Kubernetes operations by managing the control plane and automating many aspects of the Kubernetes lifecycle. Whether using EC2 for full control or Fargate for serverless deployments, EKS provides a highly scalable, secure, and resilient Kubernetes platform for containerized workloads.
+
+
+
+---
+# AWS EKS
+
+## 1. Understanding Kubernetes Fundamentals:
+
+**1.1 EKS vs. Self-Managed Kubernetes: Pros and Cons:**
+
+**Pros:**
+
+- Managed Control Plane: EKS takes care of managing the Kubernetes control plane components, such as the API server, controller manager, and etcd. AWS handles upgrades, patches, and ensures high availability of the control plane.
+
+- Automated Updates: EKS automatically updates the Kubernetes version, eliminating the need for manual intervention and ensuring that the cluster stays up-to-date with the latest features and security patches.
+
+- Scalability: EKS can automatically scale the Kubernetes control plane based on demand, ensuring the cluster remains responsive as the workload increases.
+
+- AWS Integration: EKS seamlessly integrates with various AWS services, such as AWS IAM for authentication and authorization, Amazon VPC for networking, and AWS Load Balancers for service exposure.
+
+- Security and Compliance: EKS is designed to meet various security standards and compliance requirements, providing a secure and compliant environment for running containerized workloads.
+
+- Monitoring and Logging: EKS integrates with AWS CloudWatch for monitoring cluster health and performance metrics, making it easier to track and troubleshoot issues.
+
+- Ecosystem and Community: Being a managed service, EKS benefits from continuous improvement, support, and contributions from the broader Kubernetes community.
+
+**Cons:**
+
+- Cost: EKS is a managed service, and this convenience comes at a cost. Running an EKS cluster may be more expensive compared to self-managed Kubernetes, especially for large-scale deployments.
+
+- Less Control: While EKS provides a great deal of automation, it also means that you have less control over the underlying infrastructure and some Kubernetes configurations.
+
+**1.1.2 Self-Managed Kubernetes on EC2 Instances:**
+
+**Pros:**
+
+- Cost-Effective: Self-managed Kubernetes allows you to take advantage of EC2 spot instances and reserved instances, potentially reducing the overall cost of running Kubernetes clusters.
+
+- Flexibility: With self-managed Kubernetes, you have full control over the cluster's configuration and infrastructure, enabling customization and optimization for specific use cases.
+
+- EKS-Compatible: Self-managed Kubernetes on AWS can still leverage various AWS services and features, enabling integration with existing AWS resources.
+
+- Experimental Features: Self-managed Kubernetes allows you to experiment with the latest Kubernetes features and versions before they are officially supported by EKS.
+
+**Cons:**
+
+- Complexity: Setting up and managing a self-managed Kubernetes cluster can be complex and time-consuming, especially for those new to Kubernetes or AWS.
+
+- Maintenance Overhead: Self-managed clusters require manual management of Kubernetes control plane updates, patches, and high availability.
+
+- Scaling Challenges: Scaling the control plane of a self-managed cluster can be challenging, and it requires careful planning to ensure high availability during scaling events.
+
+- Security and Compliance: Self-managed clusters may require additional effort to implement best practices for security and compliance compared to EKS, which comes with some built-in security features.
+
+- Lack of Automation: Self-managed Kubernetes requires more manual intervention and scripting for certain operations, which can increase the risk of human error.
+
+## 2. Setting up your AWS Environment for EKS
+
+**2.1 Creating an AWS Account and Setting up IAM Users:**
 
 Creating an AWS account is the first step to access and utilize AWS services, including Amazon Elastic Kubernetes Service (EKS). Here's a step-by-step guide to creating an AWS account and setting up IAM users:
 
@@ -103,7 +219,7 @@ Creating an AWS account is the first step to access and utilize AWS services, in
    - If you selected "Programmatic access" during user creation, you will receive access keys (Access Key ID and Secret Access Key).
    - Store these access keys securely, as they will be used to authenticate API requests made to AWS services.
 
-## 2.2 Configuring the AWS CLI and kubectl
+**2.2 Configuring the AWS CLI and `kubectl`:**
 
 With IAM users set up, you can now configure the AWS CLI and kubectl on your local machine to interact with AWS services and EKS clusters:
 
@@ -133,18 +249,18 @@ With IAM users set up, you can now configure the AWS CLI and kubectl on your loc
      kubectl get nodes
      ```
 
-## 2.3 Preparing Networking and Security Groups for EKS
+**2.3 Preparing Networking and Security Groups for EKS:**
 
 Before launching an EKS cluster, you need to prepare the networking and security groups to ensure proper communication and security within the cluster:
 
-1. **Creating an Amazon VPC (Virtual Private Cloud)**:
+**I. Creating an Amazon VPC (Virtual Private Cloud)**:
    - Go to the AWS Management Console and navigate to the VPC service.
    - Click on "Create VPC" and enter the necessary details like VPC name, IPv4 CIDR block, and subnets.
    - Create public and private subnets to distribute resources in different availability zones.
 
 Sure! Let's go into detail for each of the points:
 
-2. **Configuring Security Groups**
+**II. Configuring Security Groups**
 
 **Security Groups** are a fundamental aspect of Amazon Web Services (AWS) that act as virtual firewalls for your AWS resources, including Amazon Elastic Kubernetes Service (EKS) clusters. Security Groups control inbound and outbound traffic to and from these resources based on rules you define. Here's a step-by-step guide on configuring Security Groups for your EKS cluster:
 
@@ -173,9 +289,9 @@ Sure! Let's go into detail for each of the points:
 
 Configuring Security Groups ensures that only the necessary traffic is allowed to and from your EKS worker nodes, enhancing the security of your EKS cluster.
 
-3. **Setting Up Internet Gateway (IGW)**
+**III. Setting Up Internet Gateway (IGW)**
 
-An **Internet Gateway (IGW)** is a horizontally scaled, redundant, and highly available AWS resource that allows communication between your VPC and the internet. To enable EKS worker nodes to access the internet for tasks like pulling container images, you need to set up an Internet Gateway in your VPC. Here's how to do it:
+An **Internet Gateway (IGW)** is a horizontally scaled, redundant, and highly available AWS resource that allows communication between your VPC and the internet. To **enable EKS worker nodes to access the internet for tasks like pulling container images, you need to set up an Internet Gateway in your VPC**. Here's how to do it:
 
 1. **Create an Internet Gateway**:
    - Go to the AWS Management Console and navigate to the Amazon VPC service.
@@ -194,7 +310,7 @@ An **Internet Gateway (IGW)** is a horizontally scaled, redundant, and highly av
 
 By setting up an Internet Gateway and updating the Route Tables, you provide internet access to your EKS worker nodes, enabling them to interact with external resources like container registries and external services.
 
-4. **Configuring IAM Policies**
+**IV. Configuring IAM Policies**
 
 **Identity and Access Management (IAM)** is a service in AWS that allows you to manage access to AWS resources securely. IAM policies define permissions that specify what actions are allowed or denied on specific AWS resources. For your EKS cluster, you'll need to configure IAM policies to grant necessary permissions to your worker nodes and other resources. Here's how to do it:
 
@@ -216,4 +332,25 @@ By setting up an Internet Gateway and updating the Route Tables, you provide int
 By configuring IAM policies and associating them with IAM roles, you grant specific permissions to your EKS worker nodes, ensuring they can interact with AWS resources as needed while maintaining security and access control.
 
 By completing these steps, your AWS environment is ready to host an Amazon EKS cluster. You can proceed with creating an EKS cluster using the AWS Management Console or AWS CLI as described in section 3.
+
+
+
+---
+# Demo Steps
+
+[0 - Prerequisites](./0_prerequisites.md)
+
+[1 - Create EKS Cluster](./1_installing-eks.md)
+
+[2 - Configure Open ID Connect Provider for IAM](./2_configure-oidc-connector.md)
+
+[3 - Create Fargate Profile and Deploy Ingress Controller Implementation](./3_2048-app-deploy-ingress.md)
+
+**New Fargate Profile with New K8s Namespace:**
+
+![New K8s Namespace](./img/3_new_fargate_profile_eq_to_new_k8s_namespace.png)
+
+[4 - Install sample App using `Kubectl` in new "namespace", it requires updating the K8s manifest](./4_sample-app.md)
+
+[5 - ALB Add On and Deploy ALB Ingress Controller Implementation to access from Outside/External IP](./5_alb-controller-add-on.md)
 

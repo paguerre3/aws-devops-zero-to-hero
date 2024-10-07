@@ -161,12 +161,13 @@ This day focuses on AWS ECS, a fully managed container orchestration service. Yo
 **Project:** You'll deploy a multi-container application using ECS, configure auto-scaling policies, and ensure high availability and efficient resource utilization.
 
 ---
-## Day 22: AWS EKS (Elastic Kubernetes Service)
+**[Day 22: AWS EKS (Elastic Kubernetes Service)](./day-22/README.md)**
 
 This day introduces AWS EKS, a fully managed Kubernetes service. You'll learn how to deploy and manage Kubernetes clusters using EKS, including launching worker nodes, configuring networking, and deploying applications using Kubernetes manifests.
 
 **Project:** You'll deploy a sample application on EKS using Kubernetes manifests, demonstrating the capabilities of running containerized applications on a managed Kubernetes service.
 
+---
 ## Day 23: AWS Systems Manager
 
 This day focuses on AWS Secrets Manager, a service for storing and managing secrets such as database credentials, API keys, and other sensitive information. You'll learn how to store, retrieve, and rotate secrets securely in your applications.
