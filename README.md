@@ -147,12 +147,13 @@ This day focuses on AWS CloudWatch Events and EventBridge, services for event-dr
 **Project:** You'll configure a s3 bucket to host a static website and learn how to serve the requests to this website through CDN that is AWS Cloud Front.
 
 ---
-## Day 20: AWS ECR (Elastic Container Registry)
+**[Day 20: AWS ECR (Elastic Container Registry)](./day-20/README.md)**
 
 You'll explore AWS ECR, a fully managed container registry for storing and managing container images. You'll learn how to push and pull Docker images to and from ECR, enabling seamless integration with ECS and other container services.
 
 **Project:** You'll build a CI/CD pipeline that automatically builds, pushes, and deploys Docker images to ECR, ensuring streamlined container image management.
 
+---
 ## Day 21: AWS ECS (Elastic Container Service)
 
 This day focuses on AWS ECS, a fully managed container orchestration service. You'll learn how to run and manage containers using ECS, including creating task definitions, managing services, and scaling with auto-scaling capabilities.
