@@ -154,12 +154,13 @@ You'll explore AWS ECR, a fully managed container registry for storing and manag
 **Project:** You'll build a CI/CD pipeline that automatically builds, pushes, and deploys Docker images to ECR, ensuring streamlined container image management.
 
 ---
-## Day 21: AWS ECS (Elastic Container Service)
+**[Day 21: AWS ECS (Elastic Container Service)](./day-21/README.md)**
 
 This day focuses on AWS ECS, a fully managed container orchestration service. You'll learn how to run and manage containers using ECS, including creating task definitions, managing services, and scaling with auto-scaling capabilities.
 
 **Project:** You'll deploy a multi-container application using ECS, configure auto-scaling policies, and ensure high availability and efficient resource utilization.
 
+---
 ## Day 22: AWS EKS (Elastic Kubernetes Service)
 
 This day introduces AWS EKS, a fully managed Kubernetes service. You'll learn how to deploy and manage Kubernetes clusters using EKS, including launching worker nodes, configuring networking, and deploying applications using Kubernetes manifests.
