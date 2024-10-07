@@ -168,12 +168,13 @@ This day introduces AWS EKS, a fully managed Kubernetes service. You'll learn ho
 **Project:** You'll deploy a sample application on EKS using Kubernetes manifests, demonstrating the capabilities of running containerized applications on a managed Kubernetes service.
 
 ---
-## Day 23: AWS Systems Manager
+**[Day 23: AWS Secrets Manager](./day-23/README.md)**
 
 This day focuses on AWS Secrets Manager, a service for storing and managing secrets such as database credentials, API keys, and other sensitive information. You'll learn how to store, retrieve, and rotate secrets securely in your applications.
 
 **Project:** You'll configure Secrets Manager to store and manage secrets, integrate secret retrieval in an application, and implement secret rotation policies.
 
+---
 ## Day 24: Create Infrastructure using Terraform
 
 This day focusses on creating infrastructure using Terraform with real time example.
