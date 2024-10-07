@@ -290,7 +290,7 @@ Now, let's explore some real-world use cases to better understand how AWS Lambda
 **Lambda Overview - Source Code:**
 
 ![Lambda Overview - Source Code](./img/3_landa_overview_src.png)
-
-**Add Necessary Permissions to Lambda Function, e.g. in case of accessing S3 resources:**
+ 
+**Add Necessary Permissions to Lambda Function "Role", e.g. in case of accessing S3 resources:**
 
 ![Add Necessary Permissions to Lambda Function](./img/4_add_necessary_permissions_to_the_lambda_function_role.png)
