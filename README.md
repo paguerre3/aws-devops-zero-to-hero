@@ -196,10 +196,11 @@ You'll explore AWS Elastic Load Balancer, a service for distributing incoming ap
 **Project:** You'll configure an Elastic Load Balancer for an application, define target groups, and observe the load balancing behavior across instances.
 
 ---
-## Day 27: 500 AWS interview questions and answers topic wise for interviews.
+**[Day 27: 500 AWS interview questions and answers topic wise for interviews](./day-27/README.md)**
 
 This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
 
+---
 ## Day 28: AWS Cloud Migration Strategies and Tools
 
 This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.

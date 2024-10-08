@@ -1,11 +1,11 @@
 ### 1. What is Amazon DynamoDB?
-Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It's designed to handle massive amounts of structured data across various use cases.
+**Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It's designed to handle massive amounts of structured data across various use cases.**
 
 ### 2. How does Amazon DynamoDB work?
-DynamoDB stores data in tables, each with a primary key and optional secondary indexes. It automatically replicates data across multiple Availability Zones for high availability and durability.
+**DynamoDB stores data in tables, each with a primary key and optional secondary indexes.** It automatically replicates data across multiple Availability Zones for high availability and durability.
 
 ### 3. What types of data models does Amazon DynamoDB support?
-DynamoDB supports both document data model (key-value pairs) and columnar data model (tables with items and attributes). It's well-suited for a variety of applications, from simple key-value stores to complex data models.
+**DynamoDB supports both document data model (key-value pairs) and columnar data model (tables with items and attributes).** It's well-suited for a variety of applications, **from simple key-value stores to complex data models.**
 
 ### 4. What are the key features of Amazon DynamoDB?
 Key features of DynamoDB include automatic scaling, multi-master replication, global tables for global distribution, support for ACID transactions, and seamless integration with AWS services.
@@ -50,10 +50,10 @@ DynamoDB provides backup and restore capabilities. You can create on-demand back
 DynamoDB Accelerator (DAX) is an in-memory cache that provides high-speed access to frequently accessed items. It reduces the need to read data from the main DynamoDB table.
 
 ### 18. How can you implement transactions in Amazon DynamoDB?
-DynamoDB supports ACID transactions for multiple item updates. You can use the `TransactWriteItems` operation to group multiple updates into a single, atomic transaction.
+**DynamoDB supports ACID transactions for multiple item updates. You can use the `TransactWriteItems` operation to group multiple updates into a single, atomic transaction.**
 
 ### 19. What is the difference between Amazon DynamoDB and Amazon S3?
-Amazon DynamoDB is a NoSQL database service optimized for high-performance, low-latency applications with structured data. Amazon S3 is an object storage service used for storing files, images, videos, and more.
+**Amazon DynamoDB is a NoSQL database service optimized for high-performance, low-latency applications with structured data.** Amazon S3 is an object storage service used for storing files, images, videos, and more.
 
 ### 20. What are Global Tables in Amazon DynamoDB?
 Global Tables enable you to replicate data across multiple AWS regions, providing low-latency access to DynamoDB data from users around the world.
