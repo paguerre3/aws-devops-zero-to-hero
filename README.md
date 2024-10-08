@@ -189,12 +189,13 @@ You'll explore AWS CloudTrail and AWS Config, which provide auditing and complia
 **Project:** You'll configure CloudTrail to log API activities and set up AWS Config rules to enforce compliance policies for your AWS resources.
 
 ---
-## Day 26: AWS Elastic Load Balancer
+**[Day 26: AWS Elastic Load Balancer](./day-26/README.md)**
 
 You'll explore AWS Elastic Load Balancer, a service for distributing incoming application traffic across multiple targets. You'll learn how to configure and manage load balancers to ensure high availability, fault tolerance, and scalability.
 
 **Project:** You'll configure an Elastic Load Balancer for an application, define target groups, and observe the load balancing behavior across instances.
 
+---
 ## Day 27: 500 AWS interview questions and answers topic wise for interviews.
 
 This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
