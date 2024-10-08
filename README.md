@@ -175,12 +175,13 @@ This day focuses on AWS Secrets Manager, a service for storing and managing secr
 **Project:** You'll configure Secrets Manager to store and manage secrets, integrate secret retrieval in an application, and implement secret rotation policies.
 
 ---
-## Day 24: Create Infrastructure using Terraform
+**[Day 24: Create Infrastructure using Terraform](./day-24/README.md)**
 
 This day focusses on creating infrastructure using Terraform with real time example.
 
 **Project:** You'll create a VPC and deploy 2 applications in different availability zones. We will also create a load balancer to balance the load between the instances automatically.
 
+---
 ## Day 25: AWS CloudTrail and Config
 
 You'll explore AWS CloudTrail and AWS Config, which provide auditing and compliance capabilities. You'll learn how to track API calls using CloudTrail and ensure compliance with AWS Config rules.
