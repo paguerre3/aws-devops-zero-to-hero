@@ -201,10 +201,11 @@ You'll explore AWS Elastic Load Balancer, a service for distributing incoming ap
 This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
 
 ---
-## Day 28: AWS Cloud Migration Strategies and Tools
+**[Day 28: AWS Cloud Migration Strategies and Tools](./day-28/README.md)**
 
 This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
 
+---
 ## Day 29: AWS Best Practices and Job Preparation
 
 On the final day, you'll review best practices for AWS services, including security, cost optimization and performance.
