@@ -206,9 +206,10 @@ This day focuses on learning how to migrate applications to AWS cloud. What are 
 This day focuses on learning how to migrate applications to AWS cloud. What are the most popular strategies and tools used to achieve the cloud migration.
 
 ---
-## Day 29: AWS Best Practices and Job Preparation
+**[Day 29: Dynamo DB](./day-29/README.md)**
 
-On the final day, you'll review best practices for AWS services, including security, cost optimization and performance.
+---
+**[Day 30: RDS](./day-30/README.md)**
 
-## Day 30: AWS Project with RDS
+---
 
