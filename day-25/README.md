@@ -150,7 +150,7 @@ Together, these services provide comprehensive insights into both **what happene
 
 6. For "Scope of changes," choose "Resources."
 
-7. Define the rule trigger. You can use AWS Lambda as the trigger source. If you haven't already created a Lambda function for this rule, create one that checks whether monitoring is enabled for an EC2 instance. The Lambda function will return whether the resource is compliant or not based on monitoring status.
+7. Define the rule trigger. You can use AWS Lambda as the trigger source. If you haven't already created a [Lambda function](./lambda_function.py) for this rule, create [one](lambda_function.py) that checks whether monitoring is enabled for an EC2 instance. The Lambda function will return whether the resource is compliant or not based on monitoring status.
 
 **Step 3: Define the Custom Rule in AWS Config:**
 
