@@ -214,7 +214,7 @@ This day focuses on learning how to migrate applications to AWS cloud. What are 
 ---
 **[Bonus Day 31: Pricing Calculator](./day-31/README.md)**
 
---
+---
 **[Bonus Day 32: AWS Streams](./day-32/README.md)**
 
---
+---
