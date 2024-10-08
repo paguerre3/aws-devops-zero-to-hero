@@ -212,4 +212,9 @@ This day focuses on learning how to migrate applications to AWS cloud. What are 
 **[Day 30: RDS](./day-30/README.md)**
 
 ---
+**[Day 31: Pricing Calculator](./day-31/README.md)**
 
+--
+**[Day 32: AWS Streams](./day-32/README.md)**
+
+--
