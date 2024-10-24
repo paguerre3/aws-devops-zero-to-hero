@@ -218,3 +218,54 @@ This day focuses on learning how to migrate applications to AWS cloud. What are 
 **[Bonus Day 32: AWS Streams](./day-32/README.md)**
 
 ---
+### Global vs. Regional Services
+
+In AWS, services are divided into two categories based on their availability and operational scope: **Global Services** and **Regional Services**. Understanding the difference between these categories is key for efficient cloud architecture planning.
+
+### 1. **Global Services:**
+   These services operate across all AWS regions globally and are not tied to a specific region. They typically provide global access, central management, or functionality that transcends geographic boundaries.
+
+   **Key Characteristics:**
+   - Not region-specific and available across all regions.
+   - Provide global functionality (e.g., networking, identity management).
+   - Often have a single, centralized control plane.
+   - May still deploy resources in specific regions as needed.
+
+   **Examples of Global Services:**
+   - **Amazon CloudFront:** A global Content Delivery Network (CDN) that distributes content with low latency.
+   - **Amazon Route 53:** A highly available and scalable Domain Name System (DNS) service.
+   - **AWS Identity and Access Management (IAM):** Used for global account access and permission management.
+   - **AWS WAF (Web Application Firewall):** Protects against web-based attacks and can be applied globally.
+   - **AWS Global Accelerator:** Provides global traffic acceleration and routing optimization.
+
+### 2. **Regional Services:**
+   These services are region-specific, meaning their operations and resources are confined to a particular AWS region. Data and operations in one region are typically independent of other regions, making them suitable for applications that need to adhere to data residency, compliance, or latency requirements.
+
+   **Key Characteristics:**
+   - Operate within a specific AWS region.
+   - Resources, data, and services in one region do not automatically extend to other regions.
+   - Provide regional redundancy and fault tolerance.
+   - You may need to deploy these services in multiple regions to achieve global availability.
+
+   **Examples of Regional Services:**
+   - **Amazon EC2 (Elastic Compute Cloud):** Virtual machines that are region-bound, though they can communicate across regions.
+   - **Amazon S3 (Simple Storage Service):** An object storage service where buckets and data reside in a specific region.
+   - **Amazon RDS (Relational Database Service):** Databases that are region-bound, though you can replicate them across regions.
+   - **Amazon VPC (Virtual Private Cloud):** Allows you to define a virtual network within a specific region.
+   - **Amazon Lambda:** Functions that are deployed and executed within a specific region.
+
+### **Comparison Overview:**
+
+| **Aspect**              | **Global Services**                                     | **Regional Services**                                 |
+|-------------------------|---------------------------------------------------------|-------------------------------------------------------|
+| **Scope**               | Operate across multiple regions, globally accessible.    | Operate within a specific region.                     |
+| **Use Case**            | Global access, management, or networking functionality.  | Region-specific workloads, often for compliance or latency. |
+| **Examples**            | IAM, CloudFront, Route 53, AWS Global Accelerator.       | EC2, S3, RDS, Lambda, VPC.                            |
+| **Data Residency**      | Data may be replicated globally.                         | Data and resources reside in and are confined to a region. |
+| **Latency Considerations** | Lower global latency by design.                        | May require multi-region setups for global applications. |
+
+### Use Cases:
+- **Global Services** are ideal for applications that require consistent, worldwide access (e.g., a globally available website with low-latency content delivery using CloudFront).
+- **Regional Services** are used for workloads with specific data residency requirements (e.g., an application hosted in the EU for European customers using S3 or EC2 in a European region).
+
+Understanding the distinction between AWS global and regional services helps in planning for geographic coverage, latency optimization, and compliance with local regulations.
